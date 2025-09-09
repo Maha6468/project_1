@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class MyTextFormField extends StatefulWidget {
   final String label;
   final String label1;
+  final bool filled;
+  final Color? fillColor;
 
   const MyTextFormField({super.key,
-    required this.label, required this.label1
+    required this.label, required this.label1, required this.filled, required this.fillColor,
 
   });
 
@@ -23,8 +25,8 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
           child: TextFormField(
             decoration: InputDecoration(
               labelText:widget.label,
-              filled: true,
-              fillColor: Colors.grey[200],
+              filled:widget.filled,
+              fillColor: widget.fillColor,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide.none,
@@ -38,8 +40,8 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
           child: TextFormField(
             decoration: InputDecoration(
               labelText:widget.label1,
-              filled: true,
-              fillColor: Colors.grey[200],
+              filled: widget.filled,
+              fillColor:widget.fillColor,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide.none,

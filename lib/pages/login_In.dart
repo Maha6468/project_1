@@ -14,7 +14,7 @@ class LoginIn extends StatelessWidget {
         children: [
           Center(child: Text("Log In",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)),
           SizedBox(height: 15,),
-          MyTextFormField(label: "Email",label1: "Password",),
+          MyTextFormField(label: "Email",label1: "Password",filled: true,fillColor: Colors.grey[200],),
         ],
       ),
     );
