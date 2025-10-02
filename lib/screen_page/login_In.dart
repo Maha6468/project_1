@@ -8,8 +8,6 @@ class LoginIn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-
-        //crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(child: Text("Log In",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)),
