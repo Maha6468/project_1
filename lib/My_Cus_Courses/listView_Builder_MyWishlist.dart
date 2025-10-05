@@ -4,61 +4,100 @@ class ListView_Builder_MyWishlist extends StatefulWidget {
   const ListView_Builder_MyWishlist({super.key});
 
   @override
-  State<ListView_Builder_MyWishlist> createState() => _ListView_Builder_MyWishlistState();
+  State<ListView_Builder_MyWishlist> createState() =>
+      _ListView_Builder_MyWishlistState();
 }
 
-class _ListView_Builder_MyWishlistState extends State<ListView_Builder_MyWishlist> {
+class _ListView_Builder_MyWishlistState
+    extends State<ListView_Builder_MyWishlist> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(height: MediaQuery.of(context).size.height,
+    return SizedBox(
+      height: MediaQuery.of(context).size.height*0.6,
       child: ListView.builder(
         scrollDirection: Axis.vertical,
-        itemCount: 5,
+        itemCount: 20,
         itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 140,width:160,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Row(
+          return Padding(
+            padding: const EdgeInsets.all(7.0),
+            child: Stack(
               children: [
-                Image.network(
-                  "https://tinypng.com/static/images/boat.png",
-                  width: 110,height: 120,
-                  fit: BoxFit.cover,),
-                SizedBox(width: 7,),
-                Expanded(
-                  child: Column(
+                Container(
+                  height: 130,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Row(
                     children: [
-                      SizedBox(height: 15,),
-                      Text(
-                        "WordPress for Beginners Master",
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Stack(
+                          children: [
+                            Image.network(
+                              "https://tinypng.com/static/images/boat.png",
+                              width: 110,
+                              height: 120,
+                              fit: BoxFit.cover,
+                            ),
+                            Positioned(
+                              top: 10,
+                              left: 10,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Icon(
+                                  Icons.favorite,
+                                  color: Colors.deepPurpleAccent,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      SizedBox(height: 5,),
-                      Row(
-                        children: [
-                          Icon(Icons.star,color: Colors.orange,size: 16,),
-                          Text("5.0 (30 Reviews)")
-                        ],
+                      SizedBox(width: 7),
+                      Expanded(
+                        child: Column(
+                          children: [
+                            SizedBox(height: 15),
+                            Text(
+                              "WordPress for Beginners Master",
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(height: 5),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.star,
+                                  color: Colors.orange,
+                                  size: 16,
+                                ),
+                                Text("5.0 (30 Reviews)"),
+                              ],
+                            ),
+                            SizedBox(height: 5),
+                            Align(
+                              alignment: Alignment.bottomLeft,
+                              child: Text(
+                                "\$15.00",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      SizedBox(height: 5,),
-                      Align(
-                        alignment: Alignment.bottomLeft,
-                          child: Text("\$15.00",style: TextStyle(fontWeight: FontWeight.bold),))
                     ],
                   ),
                 ),
-                Align(
-                  alignment: Alignment.centerLeft,
+                Positioned(
+                  top: 60,
+                  right: 10,
                   child: Container(
-                   // padding: EdgeInsets.all(8),
-                    //margin: EdgeInsets.only(left: 8),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.grey.shade200,
@@ -66,12 +105,11 @@ class _ListView_Builder_MyWishlistState extends State<ListView_Builder_MyWishlis
                     child: const Icon(Icons.remove, color: Colors.black),
                   ),
                 ),
-
               ],
             ),
-          ),
-        );
-      },),
+          );
+        },
+      ),
     );
   }
 }
