@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project_1/My_Cus_Courses/myCourses_Second_Row.dart';
 import 'package:project_1/My_Cus_Courses/myCourses_Top_Row.dart';
 
-import '../My_Cus_Courses/listView_Builder.dart';
+import '../My_Cus_Courses/listView_Builder_MyCourse.dart';
 import '../My_Cus_Courses/myCourses_TextField.dart';
 
 class My_Courses extends StatefulWidget {
