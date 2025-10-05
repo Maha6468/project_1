@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_1/screen_page/login_In.dart';
+import 'package:project_1/screen_page/Practice.dart';
 import 'package:project_1/screen_page/my_Courses.dart';
 import 'package:project_1/screen_page/sign_In.dart';
 import 'package:project_1/screen_page/update_Password.dart';
