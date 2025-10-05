@@ -13,6 +13,7 @@ class My_Courses extends StatefulWidget {
 }
 
 class _My_CoursesState extends State<My_Courses> {
+  int _selectedIndex=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,8 +34,6 @@ class _My_CoursesState extends State<My_Courses> {
                 SizedBox(height: 1,),
                 Second_Row(text: 'Recommended', text_second: 'View all',),
                 ListView_Builder(),
-
-
               ],
             ),
           ),
@@ -43,7 +42,12 @@ class _My_CoursesState extends State<My_Courses> {
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: Colors.deepPurple,
-          currentIndex: 0,
+          currentIndex: _selectedIndex,
+          onTap: (index){
+            setState(() {
+              _selectedIndex=index;
+            });
+          },
           items: [
             BottomNavigationBarItem(icon:Icon(Icons.home),label: "Home"),
             BottomNavigationBarItem(icon:Icon(Icons.book),label: "My Course"),
