@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Cus_Wid_For_All/bottomNavigationBar.dart';
 import '../Cus_Wid_For_All/button.dart';
 import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
 import '../Edit_Profile_cus/circle_Image.dart';
@@ -65,23 +66,9 @@ class _Edit_ProfileState extends State<Edit_Profile> {
         ),
       ),
 
+bottomNavigationBar: CustomBottomNavBar(selectedIndex: _selectedIndex,
+  onItemTapped: (int ) {  },),
 
-      bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: Colors.deepPurple,
-          currentIndex: _selectedIndex,
-          onTap: (index){
-            setState(() {
-              _selectedIndex=index;
-            });
-          },
-          items: [
-            BottomNavigationBarItem(icon:Icon(Icons.home),label: "Home"),
-            BottomNavigationBarItem(icon:Icon(Icons.book),label: "My Course"),
-            BottomNavigationBarItem(icon:Icon(Icons.favorite),label: "Wishlist"),
-            BottomNavigationBarItem(icon:Icon(Icons.person),label: "Account"),
-          ]
-      ),
     );
   }
 }

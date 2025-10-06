@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Cus_Wid_For_All/bottomNavigationBar.dart';
 import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
 import '../My_Cus_Courses/listView_Builder_MyWishlist.dart';
 import '../My_Cus_Courses/myCourses_Second_Row.dart';
@@ -54,25 +55,9 @@ class _My_WishlistState extends State<My_Wishlist> {
         ),
       ),
 
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.deepPurple,
-        currentIndex: _selectedIndex,
-        onTap: (index) {
-          setState(() {
-            _selectedIndex = index;
-          });
-        },
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.book), label: "My Course"),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: "Wishlist",
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account"),
-        ],
-      ),
+     bottomNavigationBar: CustomBottomNavBar(
+       selectedIndex:_selectedIndex,
+       onItemTapped: (int ) {  },),
     );
   }
 }

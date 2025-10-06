@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_1/screen_page/courses_1.dart';
 import 'package:project_1/screen_page/edit_Profile.dart';
 import 'package:project_1/screen_page/education.dart';
 import 'package:project_1/screen_page/login_In.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
-      home:Education_Page(),
+      home:Courese_1(),
     );
   }
 }

@@ -64,12 +64,10 @@ class _Education_PageState extends State<Education_Page> {
         ],
       ),
 
-
       bottomNavigationBar: CustomBottomNavBar(
           selectedIndex: _selectedIndex,
         onItemTapped: (int )
         {  },),
-
 
     );
   }
