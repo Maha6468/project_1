@@ -56,7 +56,7 @@ class _Edit_ProfileState extends State<Edit_Profile> {
                         ),
                       ),
                       SizedBox(height: 10,),
-                      Elevate_Button(text: 'Save',)
+                      Elevate_Button(text: 'Save',width: 320,height: 40,)
                     ],
                   ),
                 )

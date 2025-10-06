@@ -21,11 +21,11 @@ class _Update_PasswordState extends State<Update_Password> {
           SizedBox(height: 20,),
           Text_Form_Field(label: 'Current Password', filled: true,fillColor: Colors.grey[200],),
           SizedBox(height: 10,),
-          Text_F_Field_With_Icon(label1: 'New Password',fillColor: Colors.grey[200],),
+          Text_F_Field_With_Icon(hintText: 'New Password',),
           SizedBox(height: 10,),
-          Text_F_Field_With_Icon(label1: 'Confirm Password',fillColor: Colors.grey[200],),
+          Text_F_Field_With_Icon(hintText: 'Confirm Password',),
           SizedBox(height: 20,),
-          Elevate_Button(text: 'Update Now',)
+          Elevate_Button(text: 'Update Now',width: 320,height: 40,)
 
         ],
       ),

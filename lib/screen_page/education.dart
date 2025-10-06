@@ -25,43 +25,47 @@ class _Education_PageState extends State<Education_Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurpleAccent,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Icon(Icons.school, color: Colors.white, size: 25,)),
-              SizedBox(width: 5,),
-              Text("Education", style: TextStyle(color: Colors.deepPurpleAccent,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurpleAccent,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(Icons.school, color: Colors.white, size: 25,)),
+                  SizedBox(width: 5,),
+                  Text("Education", style: TextStyle(color: Colors.deepPurpleAccent,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),),
+                ],
+              ),
+              SizedBox(height: 5,),
+              Circle_Image(),
+              Text("Andrew Applpie",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+              Text("3555045545"),
+              SizedBox(height: 15,),
+              Custom_TextField(text: 'Edit Profile',
+                prefixIcon: Icon(Icons.person, color: Colors.deepPurpleAccent,),),
+              Custom_TextField(text: 'Downloaded Course',
+                prefixIcon: Icon(Icons.download, color: Colors.deepPurpleAccent,),),
+              Custom_TextField(text: 'Change Password',
+                prefixIcon: Icon(Icons.key, color: Colors.deepPurpleAccent,),),
+              TextField_2(prefixIcon_2:Icon(Icons.exit_to_app_outlined,color: Colors.deepPurpleAccent,), text_2: 'Log Out',),
+              Align(
+                alignment: Alignment(.9, 3),
+                  child: Custom_Menu_Icon()),
+          
+          
             ],
           ),
-          SizedBox(height: 5,),
-          Circle_Image(),
-          Text("Andrew Applpie",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
-          Text("3555045545"),
-          SizedBox(height: 15,),
-          Custom_TextField(text: 'Edit Profile',
-            prefixIcon: Icon(Icons.person, color: Colors.deepPurpleAccent,),),
-          Custom_TextField(text: 'Downloaded Course',
-            prefixIcon: Icon(Icons.download, color: Colors.deepPurpleAccent,),),
-          Custom_TextField(text: 'Change Password',
-            prefixIcon: Icon(Icons.key, color: Colors.deepPurpleAccent,),),
-          TextField_2(prefixIcon_2:Icon(Icons.exit_to_app_outlined,color: Colors.deepPurpleAccent,), text_2: 'Log Out',),
-          Align(
-            alignment: Alignment(.9, 3),
-              child: Custom_Menu_Icon()),
-
-
-        ],
+        ),
       ),
 
       bottomNavigationBar: CustomBottomNavBar(

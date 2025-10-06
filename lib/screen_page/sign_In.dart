@@ -28,9 +28,9 @@ class _Sign_InState extends State<Sign_In> {
               SizedBox(height: 10,),
               Text_Form_Field(label: 'Email', filled: true,fillColor: Colors.grey[200],),
               SizedBox(height: 10,),
-              Text_F_Field_With_Icon(label1: 'Password',fillColor: Colors.grey[200],),
+              Text_F_Field_With_Icon(hintText: 'Password',),
               SizedBox(height: 10,),
-              Elevate_Button(text: 'Sign In',)
+              Elevate_Button(text: 'Sign In',width: 320,height: 40,)
             ],
           ),
         ),

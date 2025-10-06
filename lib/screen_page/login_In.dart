@@ -19,7 +19,7 @@ class LoginIn extends StatelessWidget {
               SizedBox(height: 15,),
               Text_Form_Field(label: "Email",filled: true,fillColor: Colors.grey[200],),
               SizedBox(height: 10,),
-              Text_F_Field_With_Icon(label1: "Password",fillColor: Colors.grey[200],),
+              Text_F_Field_With_Icon(hintText: "Password",),
               SizedBox(height: 1,),
 
               Row(
@@ -49,7 +49,7 @@ class LoginIn extends StatelessWidget {
 
               ),
 
-              Elevate_Button(text: "Log In",),
+              Elevate_Button(text: "Log In",width: 320,height: 40,),
               SizedBox(height: 10,),
               SizedBox(
                 width: 320,height: 40,
