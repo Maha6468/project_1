@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_1/screen_page/edit_Profile.dart';
+import 'package:project_1/screen_page/education.dart';
 import 'package:project_1/screen_page/login_In.dart';
 import 'package:project_1/screen_page/Practice.dart';
 import 'package:project_1/screen_page/my_Courses.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
-      home:Edit_Profile(),
+      home:Education_Page(),
     );
   }
 }
