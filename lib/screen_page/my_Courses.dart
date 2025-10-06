@@ -50,8 +50,7 @@ class _My_CoursesState extends State<My_Courses> {
         ),
       ),
 
-        bottomNavigationBar: CustomBottomNavBar(
-            selectedIndex: _selectedIndex, onItemTapped: (int ) {  },),
+       // bottomNavigationBar: CustomBottomNavBar(selectedIndex: _selectedIndex, onItemTapped: (int ) {  },),
 
     );
   }

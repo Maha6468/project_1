@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:project_1/screen_page/edit_Profile.dart';
+import 'package:project_1/screen_page/sign_In.dart';
+import 'package:project_1/screen_page/update_Password.dart';
 
 import '../Cus_Wid_For_All/bottomNavigationBar.dart';
+import '../Cus_Wid_For_All/cus_Text.dart';
 import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
 import '../Edit_Profile_cus/circle_Image.dart';
 import '../My_Cus_Courses/myCourses_Top_Row.dart';
 
-class Education_Page extends StatefulWidget {
+class Education extends StatefulWidget {
 
-  const Education_Page({super.key});
+  const Education({super.key});
 
   @override
-  State<Education_Page> createState() => _Education_PageState();
+  State<Education> createState() => _EducationState();
 }
 
-class _Education_PageState extends State<Education_Page> {
+class _EducationState extends State<Education> {
   int _selectedIndex=0;
 
   void _onNavTapped(int index) {
@@ -47,17 +51,21 @@ class _Education_PageState extends State<Education_Page> {
               ),
               SizedBox(height: 5,),
               Circle_Image(),
-              Text("Andrew Applpie",
+              Text("Md.Mahabubar Rahman",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
               Text("3555045545"),
               SizedBox(height: 15,),
               Custom_TextField(text: 'Edit Profile',
-                prefixIcon: Icon(Icons.person, color: Colors.deepPurpleAccent,),),
+                prefixIcon: Icon(Icons.person, color: Colors.deepPurpleAccent,),onPressed: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>Edit_Profile()));
+                },),
               Custom_TextField(text: 'Downloaded Course',
                 prefixIcon: Icon(Icons.download, color: Colors.deepPurpleAccent,),),
               Custom_TextField(text: 'Change Password',
-                prefixIcon: Icon(Icons.key, color: Colors.deepPurpleAccent,),),
-              TextField_2(prefixIcon_2:Icon(Icons.exit_to_app_outlined,color: Colors.deepPurpleAccent,), text_2: 'Log Out',),
+                prefixIcon: Icon(Icons.key, color: Colors.deepPurpleAccent,),onPressed: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>Update_Password()));
+                },),
+              Log_Out(),
               Align(
                 alignment: Alignment(.9, 3),
                   child: Custom_Menu_Icon()),
@@ -68,10 +76,7 @@ class _Education_PageState extends State<Education_Page> {
         ),
       ),
 
-      bottomNavigationBar: CustomBottomNavBar(
-          selectedIndex: _selectedIndex,
-        onItemTapped: (int )
-        {  },),
+    //  bottomNavigationBar: CustomBottomNavBar(selectedIndex: _selectedIndex, onItemTapped: (int ) {  },),
 
     );
   }
@@ -81,7 +86,9 @@ class Custom_TextField extends StatelessWidget {
   final String text;
   final Widget prefixIcon;
   final Widget ? suffixIcon;
-  const Custom_TextField({super.key, required this.text, required this.prefixIcon, this.suffixIcon});
+  final VoidCallback? onPressed;
+
+  const Custom_TextField({super.key, required this.text, required this.prefixIcon, this.suffixIcon, this.onPressed,});
 
   @override
   Widget build(BuildContext context) {
@@ -97,35 +104,31 @@ class Custom_TextField extends StatelessWidget {
           ),
           prefixIcon:prefixIcon,
           hintText:text,hintStyle: TextStyle(fontWeight: FontWeight.bold),
-          suffixIcon: suffixIcon?? Icon(Icons.arrow_forward_ios_rounded),
+          suffixIcon:suffixIcon?? IconButton(onPressed:onPressed ,icon:Icon(Icons.arrow_forward_ios_rounded)),
         ),
       ),
     );
   }
 }
 
-class TextField_2 extends StatelessWidget {
-  final String text_2;
-  final Widget prefixIcon_2;
-  const TextField_2({super.key, required this.prefixIcon_2, required this.text_2});
+class Log_Out extends StatelessWidget {
+  const Log_Out({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(15.0),
-      child: TextField(
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none
-          ),
-          //enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey),),
-         // focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
-          prefixIcon:prefixIcon_2,
-          hintText:text_2,hintStyle: TextStyle(fontWeight: FontWeight.bold),
-        ),
+      child: Row(
+        children: [
+          Icon(Icons.exit_to_app_outlined,color: Colors.deepPurpleAccent,),
+          TextButton(onPressed: (){
+            Navigator.push(context,MaterialPageRoute(builder: (context)=>Sign_In()));
+          }, child: Text("Log Out",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 15),))
+        ],
       ),
-    );;
+    );
   }
 }
+
 
 

@@ -57,8 +57,6 @@ class _Courese_1State extends State<Courese_1> {
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNavBar(
-          selectedIndex:_selectedIndex, onItemTapped: (int ) {  },),
     );
   }
 }

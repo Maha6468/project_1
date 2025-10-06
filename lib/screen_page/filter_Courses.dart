@@ -96,7 +96,7 @@ class _Filter_CoursesState extends State<Filter_Courses> {
                       suffixIcon: Icon(Icons.keyboard_arrow_down),
                     ),
                     SizedBox(height: 16,),
-                    Elevate_Button(text: 'Filter',width: 100,)
+                    Elevate_Button(text: 'Filter',width: 100,onPressed: (){},)
                   ],
                 ),
               ),
@@ -105,8 +105,7 @@ class _Filter_CoursesState extends State<Filter_Courses> {
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNavBar(
-          selectedIndex:_selectedIndex, onItemTapped: (int ) {  },),
+     // bottomNavigationBar: CustomBottomNavBar(selectedIndex:_selectedIndex, onItemTapped: (int ) {  },),
     );
   }
 }

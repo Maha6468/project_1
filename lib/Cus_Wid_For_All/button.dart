@@ -4,8 +4,9 @@ class Elevate_Button extends StatelessWidget {
   final String text;
   final double? width;
   final double? height;
+  final VoidCallback? onPressed;
 
-  const Elevate_Button({super.key, required this.text, required this.width, this.height});
+  const Elevate_Button({super.key, required this.text, required this.width, this.height, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +19,7 @@ class Elevate_Button extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15)
               )
           ),
-          onPressed: (){
-
-          }, child:Text(text,style: TextStyle(color: Colors.white),)),
+          onPressed: onPressed, child:Text(text,style: TextStyle(color: Colors.white),)),
     );
   }
 }

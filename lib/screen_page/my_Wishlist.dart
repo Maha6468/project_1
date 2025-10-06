@@ -55,9 +55,7 @@ class _My_WishlistState extends State<My_Wishlist> {
         ),
       ),
 
-     bottomNavigationBar: CustomBottomNavBar(
-       selectedIndex:_selectedIndex,
-       onItemTapped: (int ) {  },),
+    // bottomNavigationBar: CustomBottomNavBar(selectedIndex:_selectedIndex, onItemTapped: (int ) {  },),
     );
   }
 }

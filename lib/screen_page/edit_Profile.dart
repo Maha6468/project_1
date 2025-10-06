@@ -56,7 +56,7 @@ class _Edit_ProfileState extends State<Edit_Profile> {
                         ),
                       ),
                       SizedBox(height: 10,),
-                      Elevate_Button(text: 'Save',width: 320,height: 40,)
+                      Elevate_Button(text: 'Save',width: 320,height: 40,onPressed: (){},)
                     ],
                   ),
                 )
@@ -66,8 +66,7 @@ class _Edit_ProfileState extends State<Edit_Profile> {
         ),
       ),
 
-bottomNavigationBar: CustomBottomNavBar(selectedIndex: _selectedIndex,
-  onItemTapped: (int ) {  },),
+  //bottomNavigationBar: CustomBottomNavBar(selectedIndex: _selectedIndex, onItemTapped: (int ) {  },),
 
     );
   }

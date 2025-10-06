@@ -1,8 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:project_1/screen_page/sign_In.dart';
+import 'package:project_1/screen_page/update_Password.dart';
 import '../Cus_Wid_For_All/button.dart';
 import '../Cus_Wid_For_All/text_F_Field.dart';
 import '../Cus_Wid_For_All/text_F_Field_with_Icon.dart';
+import 'main_Screen.dart';
 
 class LoginIn extends StatelessWidget {
   const LoginIn({super.key});
@@ -36,7 +39,7 @@ class LoginIn extends StatelessWidget {
                     ],
                   ),
                   TextButton(onPressed: (){
-
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>Update_Password()));
                   }, child: Text(
                     "Forgot password",
                     style: TextStyle(
@@ -49,7 +52,10 @@ class LoginIn extends StatelessWidget {
 
               ),
 
-              Elevate_Button(text: "Log In",width: 320,height: 40,),
+              Elevate_Button(text: "Log In",width: 320,height: 40,
+                onPressed:(){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MainScreen()));
+                },),
               SizedBox(height: 10,),
               SizedBox(
                 width: 320,height: 40,
@@ -92,9 +98,7 @@ class LoginIn extends StatelessWidget {
                             text: "Sign up",style: TextStyle(color: Colors.deepPurple,fontSize:20 ),
                             recognizer: TapGestureRecognizer()
                               ..onTap=(){
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text("Sign Up clicked!")),
-                                );
+                                Navigator.push(context,MaterialPageRoute(builder: (context)=>Sign_In()));
                               }
                         )
                       ]

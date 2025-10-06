@@ -25,7 +25,7 @@ class _Update_PasswordState extends State<Update_Password> {
           SizedBox(height: 10,),
           Text_F_Field_With_Icon(hintText: 'Confirm Password',),
           SizedBox(height: 20,),
-          Elevate_Button(text: 'Update Now',width: 320,height: 40,)
+          Elevate_Button(text: 'Update Now',width: 320,height: 40,onPressed: (){},)
 
         ],
       ),
