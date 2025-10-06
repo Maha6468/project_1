@@ -44,7 +44,7 @@ class _My_CoursesState extends State<My_Courses> {
               ),
             ),
           ),
-            Align(alignment: Alignment(.9, .9), child: Custom_Menu_Icon()),
+            Custom_Menu_Icon(),
           ]
         ),
       ),

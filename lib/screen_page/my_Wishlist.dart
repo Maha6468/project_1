@@ -49,7 +49,7 @@ class _My_WishlistState extends State<My_Wishlist> {
               ),
             ),
 
-            Align(alignment: Alignment(.9, .9), child: Custom_Menu_Icon()),
+            Custom_Menu_Icon(),
           ],
         ),
       ),

@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
 
+import '../Cus_Wid_For_All/bottomNavigationBar.dart';
 import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
 import '../Edit_Profile_cus/circle_Image.dart';
 import '../My_Cus_Courses/myCourses_Top_Row.dart';
 
-class Education_Page extends StatelessWidget {
+class Education_Page extends StatefulWidget {
+
   const Education_Page({super.key});
+
+  @override
+  State<Education_Page> createState() => _Education_PageState();
+}
+
+class _Education_PageState extends State<Education_Page> {
+  int _selectedIndex=0;
+
+  void _onNavTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +63,14 @@ class Education_Page extends StatelessWidget {
 
         ],
       ),
+
+
+      bottomNavigationBar: CustomBottomNavBar(
+          selectedIndex: _selectedIndex,
+        onItemTapped: (int )
+        {  },),
+
+
     );
   }
 }
