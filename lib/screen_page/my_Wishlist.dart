@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
 import '../My_Cus_Courses/listView_Builder_MyWishlist.dart';
 import '../My_Cus_Courses/myCourses_Second_Row.dart';
 import '../My_Cus_Courses/myCourses_TextField.dart';
@@ -13,45 +14,64 @@ class My_Wishlist extends StatefulWidget {
 }
 
 class _My_WishlistState extends State<My_Wishlist> {
-  int _selectedIndex=0;
+  int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Top_Row(text: 'My Wishlist',),
-              SizedBox(height: 15,),
-              TextField_Cus(),
-              SizedBox(height: 12,),
-              Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text("Popular Course",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
+        child: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Top_Row(text: 'My Wishlist'),
+                  SizedBox(height: 15),
+                  TextField_Cus(),
+                  SizedBox(height: 12),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Popular Course",
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Expanded(child: ListView_Builder_MyWishlist()),
+
+                  // Align(alignment: Alignment(.9, -.9), child: Custom_Menu_Icon(),),
+                ],
               ),
-              SizedBox(height: 10,),
-              ListView_Builder_MyWishlist(),
-            ],
-          ),
+            ),
+
+            Align(alignment: Alignment(.9, .9), child: Custom_Menu_Icon()),
+          ],
         ),
       ),
+
       bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: Colors.deepPurple,
-          currentIndex: _selectedIndex,
-          onTap: (index){
-            setState(() {
-              _selectedIndex=index;
-            });
-          },
-          items: [
-            BottomNavigationBarItem(icon:Icon(Icons.home),label: "Home"),
-            BottomNavigationBarItem(icon:Icon(Icons.book),label: "My Course"),
-            BottomNavigationBarItem(icon:Icon(Icons.favorite),label: "Wishlist"),
-            BottomNavigationBarItem(icon:Icon(Icons.person),label: "Account"),
-          ]
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.deepPurple,
+        currentIndex: _selectedIndex,
+        onTap: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.book), label: "My Course"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: "Wishlist",
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account"),
+        ],
       ),
     );
   }

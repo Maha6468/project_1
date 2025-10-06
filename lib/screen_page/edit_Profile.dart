@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Cus_Wid_For_All/button.dart';
+import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
 import '../Edit_Profile_cus/circle_Image.dart';
 import '../Edit_Profile_cus/textField.dart';
 import '../My_Cus_Courses/myCourses_Top_Row.dart';
@@ -50,13 +51,7 @@ class _Edit_ProfileState extends State<Edit_Profile> {
                             borderRadius: BorderRadius.circular(12),
                             borderSide: BorderSide.none
                           ),
-                          suffixIcon: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.deepPurpleAccent)
-                              ),
-                              child: Icon(Icons.menu)), // small floating icon
+                          suffixIcon: Custom_Menu_Icon(), // small floating icon
                         ),
                       ),
                       SizedBox(height: 10,),
