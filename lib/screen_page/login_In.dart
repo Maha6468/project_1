@@ -67,7 +67,7 @@ class LoginIn extends StatelessWidget {
                         side: BorderSide(color: Colors.black12)
                     ),
                     onPressed: (){
-
+                      Navigator.push(context,MaterialPageRoute(builder: (context)=>Sign_In()));
                     }, child:Text("Register",style: TextStyle(color: Colors.black),)),
               ),
 
