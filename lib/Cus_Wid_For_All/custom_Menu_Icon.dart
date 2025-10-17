@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screen_page/course_2.dart';
+
 class Custom_Menu_Icon extends StatelessWidget {
   const Custom_Menu_Icon({super.key});
 
@@ -14,7 +16,10 @@ class Custom_Menu_Icon extends StatelessWidget {
               shape: BoxShape.circle,
               border: Border.all(color: Colors.deepPurpleAccent)
           ),
-          child: Icon(Icons.filter_list,size: 30,)),
+          child: IconButton(onPressed: (){
+            Navigator.push(context,MaterialPageRoute(builder: (context)=>Coursee_2()));
+          },
+              icon: Icon(Icons.filter_list,size: 35,))),
     );
   }
 }
