@@ -6,6 +6,7 @@ A Flutter UI project showing different course-related pages and user account scr
 
 ## 📸 Screenshots
 
+
 | Login | Sign In | Update Password |
 |-------|----------|-----------------|
 | ![Login](screenshots/log_in.jpg) | ![Sign In](screenshots/sign_in.jpg) | ![Update Password](screenshots/update_password.jpg) |
@@ -19,7 +20,7 @@ A Flutter UI project showing different course-related pages and user account scr
 | ![Account](screenshots/education.jpg) | ![Filter](screenshots/filter_courses.jpg) | ![Edit Profile](screenshots/edit_profile.jpg) |
 
 | Course |
-|---------|
+
 | ![Course](screenshots/course.jpg) |
 
 ---
