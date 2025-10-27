@@ -11,13 +11,14 @@ class Text_Form_Field extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  SizedBox(
-      height: 20,
       width: 330,
       child: TextFormField(
         decoration: InputDecoration(
           labelText:label,
+          //hintText: "Maha",
           filled:filled,
           fillColor: fillColor,
+         // prefixIcon: Icon(Icons.add_alert),
           prefixIcon: preIcon != null ? Icon(preIcon) : null,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
