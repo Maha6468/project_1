@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-
-//import '../Cus_Wid_For_All/bottomNavigationBar.dart';
-//import '../Cus_Wid_For_All/elevated_button.dart';
-//import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
 import '../Custom_Widget_For_All/elevated_button.dart';
 import '../Custom_Widget_For_All/custom_Menu_Icon.dart';
+import '../Custom_Widget_For_All/top_Row.dart';
 import '../Edit_Profile_cus/circle_Image.dart';
 import '../Edit_Profile_cus/textField.dart';
-import '../My_Cus_Courses/myCourses_Top_Row.dart';
 
 class Edit_Profile extends StatefulWidget {
   const Edit_Profile({super.key});
