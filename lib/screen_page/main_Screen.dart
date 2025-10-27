@@ -4,8 +4,9 @@ import 'package:project_1/screen_page/my_Courses.dart';
 import 'package:project_1/screen_page/my_Wishlist.dart';
 import 'package:project_1/screen_page/edit_Profile.dart';
 
-import '../Cus_Wid_For_All/bottomNavigationBar.dart';
-import '../Cus_Wid_For_All/custom_Bottom_Nav_Bar.dart';
+//import '../Cus_Wid_For_All/bottomNavigationBar.dart';
+//import '../Cus_Wid_For_All/custom_Bottom_Nav_Bar.dart';
+import '../Custom_Widget_For_All/bottomNavigationBar.dart';
 import 'education.dart'; // তোমার CustomBottomNavBar file path
 
 class MainScreen extends StatefulWidget {

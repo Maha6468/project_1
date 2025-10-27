@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../Cus_Wid_For_All/bottomNavigationBar.dart';
-import '../Cus_Wid_For_All/button.dart';
-import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
+//import '../Cus_Wid_For_All/bottomNavigationBar.dart';
+//import '../Cus_Wid_For_All/elevated_button.dart';
+//import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
+import '../Custom_Widget_For_All/elevated_button.dart';
+import '../Custom_Widget_For_All/custom_Menu_Icon.dart';
 import '../Edit_Profile_cus/circle_Image.dart';
 import '../Edit_Profile_cus/textField.dart';
 import '../My_Cus_Courses/myCourses_Top_Row.dart';
@@ -56,7 +58,7 @@ class _Edit_ProfileState extends State<Edit_Profile> {
                         ),
                       ),
                       SizedBox(height: 10,),
-                      Elevate_Button(text: 'Save',width: 320,height: 40,onPressed: (){},)
+                      Elevated_Button(text: 'Save',width: 320,height: 40,onPressed: (){},)
                     ],
                   ),
                 )

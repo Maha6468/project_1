@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Elevate_Button extends StatelessWidget {
+class Elevated_Button extends StatelessWidget {
   final String text;
   final double? width;
   final double? height;
   final VoidCallback? onPressed;
 
-  const Elevate_Button({super.key, required this.text, required this.width, this.height, this.onPressed});
+  const Elevated_Button({super.key, required this.text, required this.width, this.height, this.onPressed});
 
   @override
   Widget build(BuildContext context) {

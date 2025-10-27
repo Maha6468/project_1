@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:project_1/Cus_Wid_For_All/button.dart';
-import 'package:project_1/Cus_Wid_For_All/text_form_field.dart';
-import 'package:project_1/Cus_Wid_For_All/text_F_Field_with_Icon.dart';
+//import 'package:project_1/Cus_Wid_For_All/elevated_button.dart';
+//import 'package:project_1/Cus_Wid_For_All/text_form_field.dart';
+//import 'package:project_1/Cus_Wid_For_All/text_F_Field_with_Icon.dart';
+
+import '../Custom_Widget_For_All/elevated_button.dart';
+import '../Custom_Widget_For_All/text_F_Field_with_Icon.dart';
+import '../Custom_Widget_For_All/text_form_field.dart';
 
 class Update_Password extends StatefulWidget {
   const Update_Password({super.key});
@@ -25,7 +29,7 @@ class _Update_PasswordState extends State<Update_Password> {
           SizedBox(height: 10,),
           Text_F_Field_With_Icon(hintText: 'Confirm Password',),
           SizedBox(height: 20,),
-          Elevate_Button(text: 'Update Now',width: 320,height: 40,onPressed: (){},)
+          Elevated_Button(text: 'Update Now',width: 320,height: 40,onPressed: (){},)
 
         ],
       ),

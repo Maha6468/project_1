@@ -2,13 +2,23 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:project_1/screen_page/sign_In.dart';
 import 'package:project_1/screen_page/update_Password.dart';
-import '../Cus_Wid_For_All/button.dart';
-import '../Cus_Wid_For_All/text_form_field.dart';
-import '../Cus_Wid_For_All/text_F_Field_with_Icon.dart';
+//import '../Cus_Wid_For_All/elevated_button.dart';
+//import '../Cus_Wid_For_All/text_form_field.dart';
+//import '../Cus_Wid_For_All/text_F_Field_with_Icon.dart';
+import '../Custom_Widget_For_All/elevated_button.dart';
+import '../Custom_Widget_For_All/text_form_field.dart';
 import 'main_Screen.dart';
 
-class LoginIn extends StatelessWidget {
-  const LoginIn({super.key});
+class LoginIn extends StatefulWidget {
+
+   LoginIn({super.key});
+
+  @override
+  State<LoginIn> createState() => _LoginInState();
+}
+
+class _LoginInState extends State<LoginIn> {
+  bool _isChecked=true;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +32,7 @@ class LoginIn extends StatelessWidget {
               SizedBox(height: 15,),
               Text_Form_Field(label: "Email",filled: true,fillColor: Colors.grey[200],),
               SizedBox(height: 10,),
-              Text_Form_Field(label: "Password",filled: true,fillColor: Colors.grey[200],),
+              Text_Form_Field(label: "Password",filled: true,fillColor: Colors.grey[200],sufIcon: Icons.visibility_off_outlined,),
               SizedBox(height: 1,),
 
               Row(
@@ -31,9 +41,11 @@ class LoginIn extends StatelessWidget {
                   Row(
                     children: [
                       Checkbox(
-                          value: true,
+                          value: _isChecked,
                           onChanged: (value){
-
+                            setState(() {
+                              _isChecked=value!;
+                            });
                           }),
                       Text("Remember me"),
                     ],
@@ -52,13 +64,13 @@ class LoginIn extends StatelessWidget {
 
               ),
 
-              Elevate_Button(text: "Log In",width: 320,height: 40,
+              Elevated_Button(text: "Log In",width: 320,height: 50,
                 onPressed:(){
                   Navigator.push(context,MaterialPageRoute(builder: (context)=>MainScreen()));
                 },),
               SizedBox(height: 10,),
               SizedBox(
-                width: 320,height: 40,
+                width: 320,height: 50,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         shape:RoundedRectangleBorder(
@@ -76,20 +88,68 @@ class LoginIn extends StatelessWidget {
                   color: Colors.black,
                   fontWeight: FontWeight.bold),),
 
-              SizedBox(height: 15,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  OutlinedButton(onPressed: (){
-
-                  }, child: Text("Google")),
-
-                  OutlinedButton(onPressed: (){
-
-                  }, child: Text("Facebook")),
-                ],
+              SizedBox(height: 10,),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: OutlinedButton(
+                        onPressed: () {},
+                        style: OutlinedButton.styleFrom(
+                          side: BorderSide.none,
+                          padding: EdgeInsets.symmetric(vertical: 12),
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16)
+                          )
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Image.asset("assets/images/google.png",fit:BoxFit.cover,height: 28,),
+                            SizedBox(width: 10,),
+                            Flexible(
+                              child: Text(
+                                "Google",style: TextStyle(color: Colors.black),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: OutlinedButton(
+                        onPressed: () {},
+                        style: OutlinedButton.styleFrom(
+                            side: BorderSide.none,
+                            padding: EdgeInsets.symmetric(vertical: 12),
+                            backgroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16)
+                            )
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Image.asset("assets/images/facebook.png",fit:BoxFit.cover,height: 28,),
+                            SizedBox(width: 10,),
+                            Flexible(
+                              child: Text(
+                                "Facebook",style: TextStyle(color: Colors.black),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 6,),
               Text.rich(
                   TextSpan(
                       text:"Not have an account yet?",
