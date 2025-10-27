@@ -2,13 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:project_1/screen_page/edit_Profile.dart';
 import 'package:project_1/screen_page/sign_In.dart';
 import 'package:project_1/screen_page/update_Password.dart';
-
-//import '../Cus_Wid_For_All/bottomNavigationBar.dart';
-//import '../Cus_Wid_For_All/cus_Text.dart';
-//import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
 import '../Custom_Widget_For_All/custom_Menu_Icon.dart';
 import '../Edit_Profile_cus/circle_Image.dart';
-import '../My_Cus_Courses/myCourses_Top_Row.dart';
 
 class Education extends StatefulWidget {
 
