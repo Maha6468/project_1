@@ -5,6 +5,8 @@ A Flutter UI project showing different course-related pages and user account scr
 ---
 
 ## 📸 Screenshots
+-Login
+-Sign In
 
 | Login | Sign In | Update Password |
 |-------|----------|-----------------|
