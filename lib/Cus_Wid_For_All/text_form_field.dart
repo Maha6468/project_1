@@ -6,7 +6,8 @@ class Text_Form_Field extends StatelessWidget {
   final bool filled;
   final Color? fillColor;
   final IconData? preIcon;
-  const Text_Form_Field({super.key, required this.label, required this.filled, this.fillColor, this.preIcon});
+  final IconData? sufIcon;
+  const Text_Form_Field({super.key, required this.label, required this.filled, this.fillColor, this.preIcon, this.sufIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +21,8 @@ class Text_Form_Field extends StatelessWidget {
           fillColor: fillColor,
          // prefixIcon: Icon(Icons.add_alert),
           prefixIcon: preIcon != null ? Icon(preIcon) : null,
+         // suffixIcon: Icon(Icons.add),
+          suffixIcon: sufIcon!=null? Icon(sufIcon):null,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide.none,
