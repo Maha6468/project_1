@@ -1,16 +1,32 @@
-# project_1
+# 📚 My Courses
 
-A new Flutter project.
+A Flutter UI project showing different course-related pages and user account screens.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📸 Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+| Login | Sign In | Update Password |
+|-------|----------|-----------------|
+| ![Login](screenshots/log_in.jpg) | ![Sign In](screenshots/sign_in.jpg) | ![Update Password](screenshots/update_password.jpg) |
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| My Courses | Wishlist | Courses |
+|-------------|-----------|----------|
+| ![My Courses](screenshots/my_courses.jpg) | ![Wishlist](screenshots/my_wishlist.jpg) | ![Courses](screenshots/courses.jpg) |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Account | Filter Courses | Edit Profile |
+|----------|----------------|---------------|
+| ![Account](screenshots/education.jpg) | ![Filter](screenshots/filter_courses.jpg) | ![Edit Profile](screenshots/edit_profile.jpg) |
+
+| Course |
+|---------|
+| ![Course](screenshots/course.jpg) |
+
+---
+
+## ⚙️ Run the Project
+
+```bash
+flutter pub get
+flutter run
+
