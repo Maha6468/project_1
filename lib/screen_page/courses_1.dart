@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-
-//import '../Cus_Wid_For_All/bottomNavigationBar.dart';
-//import '../Cus_Wid_For_All/cus_Courses_1.dart';
-//import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
 import '../Custom_Widget_For_All/cus_Courses_1.dart';
 import '../Custom_Widget_For_All/custom_Menu_Icon.dart';
-import '../My_Cus_Courses/myCourses_Top_Row.dart';
+import '../Custom_Widget_For_All/top_Row.dart';
 
 class Courese_1 extends StatefulWidget {
   const Courese_1({super.key});
