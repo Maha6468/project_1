@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
-//import 'package:project_1/Cus_Wid_For_All/cus_Text.dart';
-
-//import '../Cus_Wid_For_All/bottomNavigationBar.dart';
-//import '../Cus_Wid_For_All/elevated_button.dart';
-//import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
-//import '../Cus_Wid_For_All/text_form_field.dart';
-//import '../Cus_Wid_For_All/text_F_Field_with_Icon.dart';
 import '../Custom_Widget_For_All/elevated_button.dart';
 import '../Custom_Widget_For_All/cus_Text.dart';
 import '../Custom_Widget_For_All/custom_Menu_Icon.dart';
 import '../Custom_Widget_For_All/text_F_Field_with_Icon.dart';
-import '../My_Cus_Courses/myCourses_Top_Row.dart';
+import '../Custom_Widget_For_All/top_Row.dart';
 
 class Filter_Courses extends StatefulWidget {
   const Filter_Courses({super.key});
