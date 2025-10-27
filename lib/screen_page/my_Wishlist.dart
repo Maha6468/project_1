@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-
-//import '../Cus_Wid_For_All/bottomNavigationBar.dart';
-//import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
 import '../Custom_Widget_For_All/custom_Menu_Icon.dart';
+import '../Custom_Widget_For_All/text_form_field.dart';
+import '../Custom_Widget_For_All/top_Row.dart';
 import '../My_Cus_Courses/listView_Builder_MyWishlist.dart';
-import '../My_Cus_Courses/myCourses_Second_Row.dart';
-import '../My_Cus_Courses/myCourses_TextField.dart';
-import '../My_Cus_Courses/myCourses_Top_Row.dart';
+import 'filter_Courses.dart';
 
 class My_Wishlist extends StatefulWidget {
   const My_Wishlist({super.key});
@@ -31,7 +28,26 @@ class _My_WishlistState extends State<My_Wishlist> {
                 children: [
                   Top_Row(text: 'My Wishlist'),
                   SizedBox(height: 15),
-                  TextField_Cus(),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text_Form_Field(preIcon:Icons.search,hinText: "Search", filled: true,),
+                      ),
+                      SizedBox(width: 12,),
+                      Container(
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                            color: Colors.deepPurpleAccent,
+                            border: Border.all(color: Colors.white),
+                            shape: BoxShape.rectangle,
+                            borderRadius: BorderRadius.circular(10)
+                        ),
+                        child: IconButton(onPressed: (){
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Filter_Courses()));
+                        }, icon: Icon(Icons.tune,color: Colors.white,)),
+                      )
+                    ],
+                  ),
                   SizedBox(height: 12),
                   Align(
                     alignment: Alignment.centerLeft,
