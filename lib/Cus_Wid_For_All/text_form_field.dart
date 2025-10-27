@@ -11,6 +11,7 @@ class Text_Form_Field extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  SizedBox(
+      height: 20,
       width: 330,
       child: TextFormField(
         decoration: InputDecoration(
