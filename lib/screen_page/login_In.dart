@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:project_1/screen_page/sign_In.dart';
 import 'package:project_1/screen_page/update_Password.dart';
 import '../Cus_Wid_For_All/button.dart';
-import '../Cus_Wid_For_All/text_F_Field.dart';
+import '../Cus_Wid_For_All/text_form_field.dart';
 import '../Cus_Wid_For_All/text_F_Field_with_Icon.dart';
 import 'main_Screen.dart';
 
@@ -22,7 +22,7 @@ class LoginIn extends StatelessWidget {
               SizedBox(height: 15,),
               Text_Form_Field(label: "Email",filled: true,fillColor: Colors.grey[200],),
               SizedBox(height: 10,),
-              Text_F_Field_With_Icon(hintText: "Password",),
+              Text_Form_Field(label: "Password",filled: true,fillColor: Colors.grey[200],),
               SizedBox(height: 1,),
 
               Row(

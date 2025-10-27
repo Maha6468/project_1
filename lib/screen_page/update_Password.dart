@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_1/Cus_Wid_For_All/button.dart';
-import 'package:project_1/Cus_Wid_For_All/text_F_Field.dart';
+import 'package:project_1/Cus_Wid_For_All/text_form_field.dart';
 import 'package:project_1/Cus_Wid_For_All/text_F_Field_with_Icon.dart';
 
 class Update_Password extends StatefulWidget {

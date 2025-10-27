@@ -4,7 +4,7 @@ import 'package:project_1/Cus_Wid_For_All/cus_Text.dart';
 import '../Cus_Wid_For_All/bottomNavigationBar.dart';
 import '../Cus_Wid_For_All/button.dart';
 import '../Cus_Wid_For_All/custom_Menu_Icon.dart';
-import '../Cus_Wid_For_All/text_F_Field.dart';
+import '../Cus_Wid_For_All/text_form_field.dart';
 import '../Cus_Wid_For_All/text_F_Field_with_Icon.dart';
 import '../My_Cus_Courses/myCourses_Top_Row.dart';
 
