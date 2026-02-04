@@ -41,8 +41,7 @@ class _Sign_InState extends State<Sign_In> {
                     onPressed: (){
                   Navigator.pop(context);
                 }, child:Text("back",style: TextStyle(color: Colors.white),))
-        
-        
+
               ],
             ),
           ),
