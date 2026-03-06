@@ -1,6 +1,7 @@
 # 📚 My Courses
 
 A Flutter UI project showing different course-related pages and user account screens.
+choose your seats.
 
 ---
 
@@ -20,7 +21,7 @@ A Flutter UI project showing different course-related pages and user account scr
 | ![Account](screenshots/education.jpg) | ![Filter](screenshots/filter_courses.jpg) | ![Edit Profile](screenshots/edit_profile.jpg) |
 
 | Course |
-
+|-------|
 | ![Course](screenshots/course.jpg) |
 
 ---
