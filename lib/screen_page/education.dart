@@ -62,8 +62,7 @@ class _EducationState extends State<Education> {
                   Navigator.push(context,MaterialPageRoute(builder: (context)=>Update_Password()));
                 },),
               Log_Out(),
-              Align(
-                alignment: Alignment(.9, 3),
+              Align(alignment: Alignment(.9, 3),
                   child: Custom_Menu_Icon()),
           
           
