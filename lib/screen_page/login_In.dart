@@ -25,8 +25,8 @@ class _LoginInState extends State<LoginIn> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             Top_Arrow_Icon(),
-              SizedBox(height: 50,),
+              Top_Arrow_Icon(),
+              SizedBox(height: 50),
               Center(
                 child: Text(
                   "Log In",
