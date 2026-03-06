@@ -23,7 +23,7 @@ choose your seats.
 | Course |
 |-------|
 | ![Course](screenshots/course.jpg) |
-
+|-------|
 ---
 
 ## ⚙️ Run the Project
